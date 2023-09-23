@@ -1,6 +1,36 @@
-.body{
+/* General css - body, html and fonts */
+body{
     margin: 0;
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+    background-color: #FFF0EA;
+    font-size: 62.5%;
+}
+
+mainText{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 3.6rem;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 3.6rem;
+}
+
+h2{
+    font-family: 'Oswald', sans-serif;
+    font-weight: light;
+    font-size: 3.2rem;
+}
+
+/* Header section css */
+
+header{
+    height: 10vh;
+    margin: 7vh 10%;
+    border: solid 5px #2EC32B;
+    border-radius: 20px;
 }
