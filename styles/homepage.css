@@ -8,22 +8,46 @@ body{
     font-size: 62.5%;
 }
 
-mainText{
+.mainText{
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 3.6rem;
+    font-size: 1.6rem;
+    line-height: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 
 h1{
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 3.6rem;
+    font-size: 1.4rem;
+    line-height: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 
 h2{
     font-family: 'Oswald', sans-serif;
     font-weight: light;
-    font-size: 3.2rem;
+    font-size: 1.4rem;
+    line-height: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+i{
+    font-size: 1.2rem;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
 }
 
 /* Header section css */
@@ -31,6 +55,27 @@ h2{
 header{
     height: 10vh;
     margin: 7vh 10%;
+    padding: 0 7%;
     border: solid 5px #2EC32B;
     border-radius: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftSideHeader,
+.rightSideHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftSideHeader{
+    width: 27%;
+}
+
+.rightSideHeader{
+    width: 22%;
 }
