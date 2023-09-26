@@ -16,13 +16,15 @@ body{
     display: block;
     padding: 0;
     margin: 0;
+    color: rgb(190, 35, 21);
 }
 
 h1{
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 3.8rem;
     line-height: 100%;
+    word-spacing: 5px;
     display: block;
     padding: 0;
     margin: 0;
@@ -39,6 +41,11 @@ h2{
     letter-spacing: 1px;
 }
 
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
 i{
     font-size: 1.2rem;
 }
@@ -46,8 +53,17 @@ i{
 a{
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: rgb(47, 47, 47);
     display: inline-block;
+}
+
+button{
+    border: solid 5px #5A7BD0;
+    border-radius: 20px;
+    height: 7vh;
+    width: 30%;
+    margin: 2vh 5% 2vh 0;
+    cursor: pointer;
 }
 
 /* Header section css */
@@ -78,4 +94,29 @@ header{
 
 .rightSideHeader{
     width: 22%;
+}
+
+/* Hero section css */
+
+.heroSection{
+    height: 80vh;
+    margin: 7vh 10%;
+    padding: 0 7%;
+    border: solid 5px #C76464;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+}
+
+/* Branches Section css */
+
+.compsciSection{
+    height: 80vh;
+    margin: 7vh 10%;
+    padding: 0 7%;
+    border: solid 5px #7927FE;
+    border-radius: 20px;
 }
