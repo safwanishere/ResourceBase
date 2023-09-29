@@ -90,7 +90,7 @@ header{
     height: 10vh;
     margin: 7vh 10%;
     padding: 0 7%;
-    border: solid 5px #2EC32B;
+    border: solid 5px #6CC3A4;
     border-radius: 20px;
 
     display: flex;
@@ -147,7 +147,7 @@ header{
     height: fit-content;
     margin: 7vh 10%;
     padding: 7vh 7%;
-    border: solid 5px #7927FE;
+    border: solid 5px #AA98D4;
     border-radius: 20px;
 }
 
@@ -160,6 +160,6 @@ header{
     height: fit-content;
     margin-top: 10vh;
     padding: 7vh 7%;
-    border: solid 5px #E37537;
+    border: solid 5px #E29D9F;
     border-radius: 20px;
 }
