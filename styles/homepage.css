@@ -60,7 +60,7 @@ a{
     display: inline-block;
 }
 
-button{
+.button{
     background-color: inherit;
     border: solid 5px #5A7BD0;
     border-radius: 20px;
@@ -73,13 +73,13 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.button:hover{
     background-color: #5A7BD0;
     color: white;
     transition: 200ms;
 }
 
-button:active{
+.button:active{
     background-color: #FFF0EA;
     color: black;
 }
@@ -162,4 +162,41 @@ header{
     padding: 7vh 7%;
     border: solid 5px #E29D9F;
     border-radius: 20px;
+}
+
+/* Responsive media queries */
+
+/* laptops */
+@media screen and (max-width: 1024px){
+    .mainText{
+        font-size: 1.2rem;
+    }
+    h1{
+        font-size: 3rem;
+        line-height: 100%;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    i{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    .button{
+        font-size: 0.7rem;
+        min-width: fit-content;
+    }
+
+    .heroRight img{
+        width: 300px;
+    }
+
+    .branchSection h2{
+        font-size: 1.6rem;
+    }
+    .compsciSection h1{
+        font-size: 2.4rem;
+    }
 }
