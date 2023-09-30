@@ -248,13 +248,13 @@ header{
     .heroSection{
         flex-direction: column;
         height: fit-content;
-        gap: 7vh;
-        padding: 7vh 5%;
+        gap: 6vh;
+        padding: 4vh 5%;
         margin: 3vh 5%;
     }
     .compsciSection{
         margin: 3vh 5%;
-        padding: 7vh 5%;
+        padding: 4vh 5%;
     }
     .mainText{
         font-size: 1rem;
@@ -266,6 +266,7 @@ header{
     }
     h2{
         font-size: 0.8rem;
+        letter-spacing: 0;
     }
     i{
         font-size: 0.8rem;
@@ -285,17 +286,21 @@ header{
         margin: 2vh 9%;
     }
     .leftSideHeader{
-        width: 44%;
+        width: 45%;
         align-items: center;
     }
     .rightSideHeader{
-        width: 34%;
+        width: 37%;
     }
     .branchSection h2{
         font-size: 1.2rem;
     }
     .compsciSection h1{
         font-size: 2rem;
+    }
+    .branchSection .button{
+        margin-top: 1vh;
+        margin-bottom: 1vh;
     }
     .semOneCSE,
     .semTwoCSE{
