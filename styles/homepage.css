@@ -200,3 +200,89 @@ header{
         font-size: 2.4rem;
     }
 }
+
+/* Tablets */
+@media screen and (max-width: 768px){
+    .mainText{
+        font-size: 1rem;
+    }
+    h1{
+        font-size: 2.6rem;
+        line-height: 100%;
+    }
+    h2{
+        font-size: 0.8rem;
+    }
+    i{
+        font-size: 0.8rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    .button{
+        font-size: 0.6rem;
+        min-width: fit-content;
+    }
+    .heroRight img{
+        width: 250px;
+    }
+
+    .branchSection h2{
+        font-size: 1.4rem;
+    }
+    .compsciSection h1{
+        font-size: 2.2rem;
+    }
+    .leftSideHeader{
+        width: 30%;
+    }
+}
+
+/* Large Mobiles */
+@media screen and (max-width: 425px){
+    .heroSection{
+        flex-direction: column;
+        height: fit-content;
+        gap: 10vh;
+        padding: 10vh 7%;
+    }
+    .mainText{
+        font-size: 0.8rem;
+    }
+    h1{
+        font-size: 2.4rem;
+        line-height: 100%;
+        text-align: center;
+    }
+    h2{
+        font-size: 0.6rem;
+    }
+    i{
+        font-size: 0.6rem;
+    }
+    p{
+        font-size: 0.7rem;
+        text-align: center;
+    }
+    .button{
+        font-size: 0.4rem;
+        min-width: fit-content;
+        padding: 0;
+    }
+    .heroSection .button{
+        margin: 2vh 9%;
+    }
+    .leftSideHeader{
+        width: 44%;
+        align-items: center;
+    }
+    .rightSideHeader{
+        width: 33%;
+    }
+    .branchSection h2{
+        font-size: 1.2rem;
+    }
+    .compsciSection h1{
+        font-size: 2rem;
+    }
+}
