@@ -102,3 +102,24 @@ a{
     cursor: pointer;
     letter-spacing: 1.5px;
 }
+
+.downloadButton{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .downloadButton{
+        display: initial;
+    }
+    .toggleButton{
+        display: none;
+    }
+    h1{
+        font-size: 3.4rem;
+    }
+    .divider,
+    .textbooks,
+    .referenceBooks{
+        margin: 5vh 10%;
+    }
+}
