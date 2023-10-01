@@ -1,0 +1,104 @@
+/* general css */
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    /* background-color: #FFF0EA; */
+    background-color: #ffecec;
+    font-size: 62.5%;
+}
+
+.mainText{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+    color: rgb(190, 35, 21);
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 3.6rem;
+    line-height: 130%;
+    word-spacing: 5px;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+h2{
+    font-family: 'Oswald', sans-serif;
+    font-weight: light;
+    font-size: 2rem;
+    line-height: 100%;
+    display: block;
+    padding: 0;
+    margin: 15px 0;
+    letter-spacing: 1px;
+    color: rgb(61, 61, 61);
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: rgb(67, 67, 67);
+    display: inline-block;
+}
+
+i{
+    font-size: 1.2rem;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(47, 47, 47);
+    display: inline-block;
+}
+
+/* specific css */
+
+.title{
+    text-align: center;
+    margin: 9vh auto;
+    /* text-decoration: underline; */
+}
+
+.textbooks,
+.referenceBooks{
+    margin: 10vh 20%;
+}
+
+.pdf{
+    display: none;
+}
+
+.titleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.divider{
+    height: 5px;
+    margin: 5vh 20%;
+    border-radius: 5px;
+    background-color: #C76464;
+}
+
+.toggleButton{
+    border: none;
+    color: #5A7BD0;
+    background-color: rgba(255, 0, 0, 0);
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+}
