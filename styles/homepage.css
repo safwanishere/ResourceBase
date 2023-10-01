@@ -2,7 +2,7 @@
 body{
     margin: 0;
     padding: 0;
-    height: 310vh;
+    height: fit-content;
     width: 100%;
     overflow-x: hidden;
     /* background-color: #FFF0EA; */
