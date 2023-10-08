@@ -164,6 +164,40 @@ header{
     border-radius: 20px;
 }
 
+.contactHeader{
+    margin-bottom: 10vh;
+}
+
+.linkHolder{
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+
+.linkHolder span{
+    font-weight: bold;
+}
+
+.contactIcons{
+    font-size: 1.5rem;
+}
+
+.fa-discord{
+    color: #7289DA;
+}
+
+.fa-linkedin{
+    color: #0072b1 ;
+}
+
+.fa-github{
+    color: rgb(46, 46, 46);
+}
+
+.fa-envelope{
+    color: grey;
+}
+
 /* Responsive media queries */
 
 /* laptops */
@@ -310,4 +344,11 @@ header{
         border: solid 5px #E29D9F;
         border-radius: 20px;
     }
+}
+
+.footer{
+    width: 100%;
+    height: 2vh;
+    background-color: #5A7BD0;
+    margin-top: 20vh;
 }
