@@ -344,6 +344,15 @@ header{
         border: solid 5px #E29D9F;
         border-radius: 20px;
     }
+    .linkHolder{
+        gap: 5%;
+    }
+    .linkHolder p{
+        font-size: 0.7rem;
+    }
+    .linkholder i{
+        font-size: 0.6rem;
+    }
 }
 
 .footer{

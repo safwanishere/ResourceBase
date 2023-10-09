@@ -107,6 +107,11 @@ a{
     display: none;
 }
 
+.textbooks a p{
+    color: blue;
+    text-decoration: underline;
+}
+
 @media (max-width: 768px){
     .downloadButton{
         display: initial;
