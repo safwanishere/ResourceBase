@@ -1,10 +1,10 @@
-AHSD02 : Matrices and calculus
-AHSD03 : Engineering chemistry
-AHSD07 : Applied Physics
-ACSD01 : Object Oriented Programming
-AHSD09 : Applied Physics Laboratory
-ACSD02 : Object Oriented Programming with Java Laboratory
-AHSD05 : Engineering Chemistry Laboratory
-AMED03 : Engineering Graphics
-AHSD06 : Environmental Science
-ACSD04 : Mobile Applications Development
+AHSD02 : Matrices and calculus ------------------------------- T
+AHSD03 : Engineering chemistry ------------------------------- H
+AHSD07 : Applied Physics ------------------------------------- F
+ACSD01 : Object Oriented Programming ------------------------- F
+AHSD09 : Applied Physics Laboratory -------------------------- T
+ACSD02 : Object Oriented Programming with Java Laboratory ---- T
+AHSD05 : Engineering Chemistry Laboratory -------------------- T
+AMED03 : Engineering Graphics -------------------------------- T
+AHSD06 : Environmental Science ------------------------------- T
+ACSD04 : Mobile Applications Development --------------------- T
