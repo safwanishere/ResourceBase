@@ -1,7 +1,7 @@
 AHSD02 : Matrices and calculus ------------------------------- T
 AHSD03 : Engineering chemistry ------------------------------- H
-AHSD07 : Applied Physics ------------------------------------- F
-ACSD01 : Object Oriented Programming ------------------------- F
+AHSD07 : Applied Physics ------------------------------------- H
+ACSD01 : Object Oriented Programming ------------------------- T
 AHSD09 : Applied Physics Laboratory -------------------------- T
 ACSD02 : Object Oriented Programming with Java Laboratory ---- T
 AHSD05 : Engineering Chemistry Laboratory -------------------- T
