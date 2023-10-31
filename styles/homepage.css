@@ -143,7 +143,7 @@ header{
     margin: 2vh 5% 2vh 0;
 }
 
-.compsciSection{
+.branch{
     height: fit-content;
     margin: 7vh 10%;
     padding: 7vh 7%;
@@ -151,7 +151,7 @@ header{
     border-radius: 20px;
 }
 
-.compsciSection h1{
+.branch h1{
     font-size: 2.8rem;
 }
 
@@ -230,7 +230,7 @@ header{
     .branchSection h2{
         font-size: 1.6rem;
     }
-    .compsciSection h1{
+    .branch h1{
         font-size: 2.4rem;
     }
 }
@@ -264,7 +264,7 @@ header{
     .branchSection h2{
         font-size: 1.4rem;
     }
-    .compsciSection h1{
+    .branch h1{
         font-size: 2.2rem;
     }
     .leftSideHeader{
@@ -286,7 +286,7 @@ header{
         padding: 4vh 5%;
         margin: 3vh 5%;
     }
-    .compsciSection{
+    .branch{
         margin: 3vh 5%;
         padding: 4vh 5%;
     }
@@ -329,7 +329,7 @@ header{
     .branchSection h2{
         font-size: 1.2rem;
     }
-    .compsciSection h1{
+    .branch h1{
         font-size: 2rem;
     }
     .branchSection .button{
@@ -352,6 +352,44 @@ header{
     }
     .linkholder i{
         font-size: 0.6rem;
+    }
+}
+
+/* ultrawide displays */
+@media screen and (min-width: 1700px){
+    header{
+        border: solid 7px #6CC3A4;
+        border-radius: 30px;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    i{
+        font-size: 1.8rem;
+    }
+    p{
+        font-size: 1.6rem;
+    }
+    .button{
+        font-size: 1.4rem;
+        border-width: 7px;
+        border-radius: 30px;
+    }
+    .branch{
+        border: solid 7px #AA98D4;
+        border-radius: 30px;
+    }
+    .heroSection{
+        border: solid 7px #C76464;
+        border-radius: 30px;
+    }
+    .semOneCSE,
+    .semTwoCSE{
+        border: solid 7px #E29D9F;
+        border-radius: 30px;
     }
 }
 
