@@ -1,5 +1,5 @@
 AHSD02 : Matrices and calculus ------------------------------- T
-AHSD03 : Engineering chemistry ------------------------------- H
+AHSD03 : Engineering chemistry ------------------------------- T
 AHSD07 : Applied Physics ------------------------------------- T
 ACSD01 : Object Oriented Programming ------------------------- T
 AHSD09 : Applied Physics Laboratory -------------------------- T
