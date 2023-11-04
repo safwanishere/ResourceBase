@@ -84,6 +84,19 @@ a{
     color: black;
 }
 
+.redirectContainer{
+    background-color: #ffffb7;
+    height: 6vh;
+    border: dashed rgb(71, 71, 71) 2px;
+}
+.redirectContainer h2{
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 6vh;
+    font-style: italic;
+}
+
 /* Header section css */
 
 header{
@@ -232,6 +245,12 @@ header{
     }
     .branch h1{
         font-size: 2.4rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .redirectContainer{
+        display: none;
     }
 }
 
