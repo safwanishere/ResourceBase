@@ -36,12 +36,13 @@
         <div class="rightSideHeader">
             <a href="contact.html"><h2>Contact</h2></a>
             <a href="progress.html"><h2>Community</h2></a>
+            <a class="themeChanger" onclick="switchTheme()"><i class="fa-solid fa-moon"></i></a>
         </div>
     </header>
 
     <section class="heroSection">
         <div class="heroLeft">
-            <h1>Everything you need, to learn.</h1>
+            <h1>Everything you need, to <span>learn.</span></h1>
             <P>Welcome to the ultimate resource destination for academic success. We offer a comprehensive collection of course textbooks and reference materials, all conveniently in one place. With our help, you'll have everything you need to excel in your exams and achieve your educational goals. Start exploring today.</P>
             <button class="button" onclick="scrollDown();">Get started</button>
             <button class="button" onclick="window.location.href = 'contact.html'">Contact dev</button>
@@ -54,7 +55,7 @@
     <section class="branchSection">
         <section class="branch">
             <h1>Computer Science Engineering</h1>
-            <div class="semOneCSE">
+            <div class="semBlock">
                 <h2>Semester 1</h2>
                 <button class="button" onclick="window.location.href = 'coursePages/AHSD02.html'">matrices and calculus</button>
                 <button class="button" onclick="window.location.href = 'coursePages/AHSD03.html'">engineering chemistry</button>
@@ -68,7 +69,7 @@
                 <button class="button" onclick="window.location.href = 'coursePages/ACSD04.html'">mobile app dev</button>
                 <button class="button" onclick="window.location.href = 'coursePages/javaTraining.html'">java training bootcamp</button>
             </div>
-            <div class="semTwoCSE">
+            <div class="semBlock">
                 <h2>Semester 2</h2>
                 <button class="button" onclick="window.location.href='progress.html'">professional communication</button>
                 <button class="button" onclick="window.location.href='progress.html'">Differential equations and vector calc</button>

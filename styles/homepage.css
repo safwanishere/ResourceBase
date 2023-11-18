@@ -142,6 +142,11 @@ header{
     gap: 10%;
 }
 
+.heroLeft h1 span{
+    font-style: italic;
+    color: rgb(51, 51, 51);
+}
+
 /* Branches Section css */
 
 .branchSection h2{
@@ -168,8 +173,7 @@ header{
     font-size: 2.8rem;
 }
 
-.semOneCSE,
-.semTwoCSE{
+.semBlock{
     height: fit-content;
     margin-top: 10vh;
     padding: 7vh 7%;
@@ -355,8 +359,9 @@ header{
         margin-top: 1vh;
         margin-bottom: 1vh;
     }
-    .semOneCSE,
-    .semTwoCSE{
+    .semBlock,
+    .semBlock
+{
         height: fit-content;
         margin-top: 7vh;
         padding: 3vh 5%;
@@ -405,8 +410,9 @@ header{
         border: solid 7px #C76464;
         border-radius: 30px;
     }
-    .semOneCSE,
-    .semTwoCSE{
+    .semBlock,
+    .semBlock
+{
         border: solid 7px #E29D9F;
         border-radius: 30px;
     }
