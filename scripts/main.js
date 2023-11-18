@@ -27,20 +27,23 @@ function switchTheme(){
 
         body.style.backgroundColor = "#2A2D43";
         for (let i = 0; i < h1.length; i++){
-            h1[i].style.color = "rgb(255, 246, 235)";
+            h1[i].style.color = "white";
+            h1[i].style.fontWeight = "10";
         }
         for (let i = 0; i < h2.length; i++){
-            h2[i].style.color = "rgb(255, 246, 235)";
+            h2[i].style.color = "white";
+            h2[i].style.fontWeight = "10";
         }
         for (let i = 0; i < paraElement.length; i++){
-            paraElement[i].style.color = "rgb(255, 246, 235)";
+            paraElement[i].style.color = "white";
+            paraElement[i].style.fontWeight = "10";
         }
         for (let i = 0; i < button.length; i++){
-            button[i].style.color = "rgb(255, 246, 235)";
+            button[i].style.color = "white";
             button[i].style.borderColor = "#4D6CFA";
         }
         for (let i = 0; i < ital.length; i++){
-            ital[i].style.color = "rgb(255, 246, 235)";
+            ital[i].style.color = "white";
         }
         for (let i = 0; i < branch.length; i++){
             branch[i].style.borderColor = "#D972FF";
@@ -48,8 +51,9 @@ function switchTheme(){
         for (let i = 0; i < semBlock.length; i++){
             semBlock[i].style.borderColor = "#8CFFDA";
         }
-        mainText.style.color = "#CD533B";
-        heroSpan.style.color = "antiquewhite"
+        document.querySelector(".heroLeft").querySelector("p").style.color = "white";
+        mainText.style.color = "#e86a51";
+        heroSpan.style.color = "white"
         heroSection.style.borderColor = "#CD533B";
         heroImg.style.filter = "contrast(120%)";
         redirectContainer.style.backgroundColor = "#ffffb7";
@@ -63,12 +67,15 @@ function switchTheme(){
         body.style.backgroundColor = "#ffecec";
         for (let i = 0; i < h1.length; i++) {
             h1[i].style.color = "black";
+            h1[i].style.fontWeight = "600";
         }
         for (let i = 0; i < h2.length; i++){
             h2[i].style.color = "black";
+            h2[i].style.fontWeight = "600";
         }
         for (let i = 0; i<paraElement.length; i++){
             paraElement[i].style.color = "rgb(67, 67, 67)";
+            paraElement[i].style.fontWeight = "400";
         }
         for (let i = 0; i < button.length; i++){
             button[i].style.color = "rgb(67, 67, 67)";
