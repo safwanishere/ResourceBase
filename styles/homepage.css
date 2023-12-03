@@ -168,7 +168,7 @@ header{
     font-size: 2.8rem;
 }
 
-.semBlock{
+.semOne, .semTwo{
     height: fit-content;
     margin-top: 10vh;
     padding: 7vh 7%;
@@ -354,7 +354,8 @@ header{
         margin-top: 1vh;
         margin-bottom: 1vh;
     }
-    .semBlock{
+    .semOne, .semTwo
+{
         height: fit-content;
         margin-top: 7vh;
         padding: 3vh 5%;
@@ -403,7 +404,8 @@ header{
         border: solid 7px #C76464;
         border-radius: 30px;
     }
-    .semBlock{
+    .semOne, .semTwo
+{
         border: solid 7px #E29D9F;
         border-radius: 30px;
     }
