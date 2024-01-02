@@ -1,0 +1,1166 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Mobile App Dev</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2317bd82-e1d2-4922-9f61-69690c6fee09" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📱</span></div><h1 class="page-title">Mobile App Dev</h1><p class="page-description"></p></header><div class="page-body"><p id="2184205d-c88d-442e-8455-810cbd6d1378" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="88be507d-102f-460a-abb2-12a0653aa7f9"><div style="font-size:1.5em"><span class="icon">📜</span></div><div style="width:100%">Table of Contents<nav id="2d6ac7fa-a55c-4b26-a704-85b453396012" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e565d70a-3eb8-4ead-8f2e-3bfc75b05435"><strong><em>Installation</em></strong></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#38865f1b-c68b-4dd4-8c4b-b99f6d8260dc"><em>Creating a project</em></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#eb425d4f-7b08-4747-8b17-5d07b1d35b1c"><em>Keywords</em></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#166e8ba3-196c-44a6-9068-6813e903039c"><em>Tasks</em></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#6855fe9f-4a58-4c31-8be5-66833de31eb8"><em><span style="border-bottom:0.05em solid">Day 1</span></em></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#130deab6-e4f9-4160-9571-66b9df23e099"><em><span style="border-bottom:0.05em solid">Day 2</span></em></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#74d726ee-be16-4989-b48d-b7842d902a9d"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid">Day 3</span></em></span></em></span></em></span></em></span></em></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#eef133ba-bb38-4b11-8341-66f8849487e3"><em><span style="border-bottom:0.05em solid">Day 4</span></em></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2ec8e492-6c19-423f-be0a-bcfd28519257"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid">Day 5</span></em></span></em></span></em></span></em></span></em></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#d942292b-76a5-43fa-ad51-6a9c98cd6b48"><em>Dart Programming Language</em></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a2bcf00b-5e5b-4e4a-b54b-870c0a538948"><span style="border-bottom:0.05em solid"><strong><em>Datatypes</em></strong></span></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#b9098c45-3b17-4bcf-b82b-74feac197d7d">1. Numbers</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#05bcb86b-2eb4-42a5-9578-e4050aa56b29">2. Strings</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#e39b36b1-9767-4767-80a6-28db8231aab3">3. Booleans</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#c8713dc7-0ed9-4aef-8821-2f0971888ab8">4. Lists</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#d7818c74-69d7-4fc6-9f45-8a6f30aa2644">5. Maps</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#ee069c4c-69f4-45e1-b63f-900379fdffb9">6. Sets</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#ddbd53e7-6d23-4c93-aa5e-d36684653dcb">7. Runes</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#fe447adf-7b1f-4fb9-8f32-6139dbfc03fd"><span style="border-bottom:0.05em solid"><em>Variables</em></span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#66449384-d891-48f2-89c2-e6678c0c614a"><span style="border-bottom:0.05em solid"><em><strong>Functions</strong></em></span></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#8df1596f-4315-439e-b569-6569a5963bc6"><strong><em>Flutter</em></strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9eff7e3c-df01-47dd-9339-21cf5dee1f53"><span style="border-bottom:0.05em solid"><strong><em>Container</em></strong></span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ee46379d-94dd-4b88-9c47-957819db58f0"><span style="border-bottom:0.05em solid"><em><strong>Text</strong></em></span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9b5d68c5-3c0e-4a45-9584-3f9256b22487"><span style="border-bottom:0.05em solid"><em>Input text field</em></span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#bcb0cde5-7395-495c-a75d-d99bf464a84a"><span style="border-bottom:0.05em solid"><em>button</em></span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#216f828f-77f5-42ba-85c4-b59a1becca2b"><span style="border-bottom:0.05em solid"><em>row</em></span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#ac88cc5b-dc14-47c0-ad2a-f82c551065af"><span style="border-bottom:0.05em solid"><em>column</em></span></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#829724fe-f546-45fb-a35a-1633b8618d96"><span style="border-bottom:0.05em solid"><em>List view</em></span></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a9c0970c-3b8c-4c70-b7e1-0c7bf6545a84">Login Page design</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#79a56d80-8732-4e43-a92c-7d07682b0700"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid">Creating the Login Page</span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#d349fa14-b849-4a61-9d88-59b56ae5aa3a">Loading the profile image</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#fbf4fe4d-fbd2-4994-ab4e-2da8d21a1cef">Login Page code</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#aa6ce6db-feec-4622-bbed-2a4c1c297cac"><em><span style="border-bottom:0.05em solid">Navigation</span></em></a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#24534bfd-7d1c-40b7-82e9-978157b24089">1. Create two routes</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#da0d7c51-d33f-4bff-a6b6-32a2609b7025">2. Navigate to the second route using Navigator.pushNamed()</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#2624bfea-4258-4d3e-9469-fd66596f32d5">3. Return to the first route using Navigator.pop()</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#26c6addb-d5e0-4090-8e78-961f6fd1647b"><em><span style="border-bottom:0.05em solid"><strong><em><span style="border-bottom:0.05em solid"><strong><em><span style="border-bottom:0.05em solid"><strong>Responsive Design</strong></span></em></strong></span></em></strong></span></em></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5b9eea60-89c8-43fa-9380-de26b752c437"><em><span style="border-bottom:0.05em solid"><strong><em><span style="border-bottom:0.05em solid"><strong>Login Form Validation</strong></span></em></strong></span></em></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#fc44a32c-93fd-446e-99de-354c05cc1cc8">Social Media App Project</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a2d3f080-69f6-49a0-92a3-5afe0e1f0788">1. Create the folders inside lib</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#32cd838f-3a7e-4489-ba13-e9c087b6b1d6">2. Create classes for reusable widgets</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b7cb5d64-035f-4adf-ab38-f06e3e437f46">3. Start designing the pages for signup and splash</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e4853401-9e40-4faf-b58d-e1ab63685e4b">FireBase</a></div></nav></div></figure><p id="557cb995-8d73-441a-8f26-e1ff919863a7" class="">
+</p><h1 id="e565d70a-3eb8-4ead-8f2e-3bfc75b05435" class=""><strong><em>Installation</em></strong></h1><ol type="1" id="0c6d06bb-26e2-46c7-9df4-26f74067f31c" class="numbered-list" start="1"><li>Go to <a href="https://docs.flutter.dev/get-started/install/">https://docs.flutter.dev/get-started/install/</a></li></ol><ol type="1" id="fb3ad532-87f0-44d6-814c-ae12e11fa7d6" class="numbered-list" start="2"><li>Choose your operating system.</li></ol><ol type="1" id="d5abb44b-d231-4cb7-a9a7-f6070f2549ba" class="numbered-list" start="3"><li>Choose the platform and follow procedure.</li></ol><ol type="1" id="e12cb589-6a45-4dec-be55-271cc484a32c" class="numbered-list" start="4"><li>move the zip file to a folder in c : drive.</li></ol><ol type="1" id="112ee92c-86bf-4c33-826c-c4cb673cfaac" class="numbered-list" start="5"><li>Extract the zip file.</li></ol><ol type="1" id="a0d26cd1-72ee-4524-88db-0efddfe04ac7" class="numbered-list" start="6"><li>Update windows path variable.</li></ol><ol type="1" id="ff7766ed-2006-407a-94c0-2201c0a2a729" class="numbered-list" start="7"><li>Run <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>flutter doctor </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>on the cmd.</li></ol><hr id="61e40b97-5fb4-4769-bad9-af317fe6e028"/><p id="5a92b832-9dea-4409-8804-f102569dfc40" class="">
+</p><h1 id="38865f1b-c68b-4dd4-8c4b-b99f6d8260dc" class=""><em>Creating a project</em></h1><p id="08fad4fc-1f94-4870-81dc-5aada28d8eec" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong>command: </strong></strong></strong></strong></strong></strong></strong></strong></strong>flutter create [project name]</p><p id="bbef372b-cba6-497f-aae4-9200b34fcfda" class="">project name cannot use upper case letters</p><p id="3ae73f90-0a0b-4165-91c5-3d57c1d120b9" class="">running the project:</p><p id="ec0d781d-e840-4317-ba2a-1c8ab358d465" class=""><strong><strong><strong><strong><strong><strong><strong><strong>command: </strong></strong></strong></strong></strong></strong></strong></strong>flutter run</p><p id="925b3b90-81bb-4370-9ed6-0d8052cd7962" class="">Open the folder in vs code.</p><hr id="01b2a8a7-cfa2-48bf-aaa6-fbca12a984cf"/><p id="22b083ed-12f0-445b-8834-7e078ad36bc0" class="">
+</p><h1 id="eb425d4f-7b08-4747-8b17-5d07b1d35b1c" class=""><em>Keywords</em></h1><ol type="1" id="4a12273b-53e0-4003-871c-e09ac242dce6" class="numbered-list" start="1"><li><strong>Integer </strong>- any positive or negative non-decimal number</li></ol><ol type="1" id="3494de8e-cda6-4ba1-9361-2c23f43d5821" class="numbered-list" start="2"><li><strong>Double </strong>- decimal numbers</li></ol><ol type="1" id="4a7c32d5-3cb4-4d70-b1af-9c04d178bcb6" class="numbered-list" start="3"><li><strong>void</strong> - no return value when used as func return type</li></ol><ol type="1" id="9f8b0b91-b0e8-4472-9d5d-98e1cc5d3467" class="numbered-list" start="4"><li><strong>dynamic</strong> - takes any datatype</li></ol><ol type="1" id="801c57ba-c266-4ed3-877d-1618d238a606" class="numbered-list" start="5"><li><strong>final </strong>- any variable with final cannot be modified and is called at run time</li></ol><ol type="1" id="7f28755e-94b2-41e4-974d-65a81e2d39ba" class="numbered-list" start="6"><li><strong>const</strong> - any variable with const cannot be modified and is called at compile time</li></ol><hr id="df2cc40d-4848-4fc6-89f0-1a1074db7057"/><p id="39167bdf-9cac-4b0f-80ab-3978419ea248" class="">
+</p><h1 id="166e8ba3-196c-44a6-9068-6813e903039c" class=""><em>Tasks</em></h1><h2 id="6855fe9f-4a58-4c31-8be5-66833de31eb8" class=""><em><span style="border-bottom:0.05em solid">Day 1</span></em></h2><ul id="0cca8f5d-0389-4483-917e-1deb4027df79" class="bulleted-list"><li style="list-style-type:disc">installation</li></ul><ul id="862f1905-bca2-4fbe-b5cc-42bacaa25ce2" class="bulleted-list"><li style="list-style-type:disc">project creation</li></ul><ul id="553c0686-1c9a-4f1f-9f39-db38bda8d288" class="bulleted-list"><li style="list-style-type:disc">datatypes - string operations</li></ul><ul id="0027e92f-fa2c-4852-ba71-8391a2ad6a86" class="bulleted-list"><li style="list-style-type:disc">run the app on chrome and emulator</li></ul><h2 id="130deab6-e4f9-4160-9571-66b9df23e099" class=""><em><span style="border-bottom:0.05em solid">Day 2</span></em></h2><ul id="ab480b47-06e2-4e11-b56f-8b45507ca0b8" class="bulleted-list"><li style="list-style-type:disc">Align the column children to main axis center and cross axis center and other orientations</li></ul><ul id="f5a56605-9f63-40a3-aafd-29fe9f68a9ce" class="bulleted-list"><li style="list-style-type:disc">Create a row widget and load children horizontally</li></ul><ul id="60f7c0fa-7c17-40a8-8fac-43dd9eff935d" class="bulleted-list"><li style="list-style-type:disc">Draw login screen pages from google and label the widget types</li></ul><h2 id="74d726ee-be16-4989-b48d-b7842d902a9d" class=""><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid">Day 3</span></em></span></em></span></em></span></em></span></em></h2><ul id="d9b5695a-f1be-45d1-9e36-1c939d51fa2f" class="bulleted-list"><li style="list-style-type:disc">Login Page design</li></ul><ul id="7d56bcc9-09ec-46e7-b7bc-75c532efedb6" class="bulleted-list"><li style="list-style-type:disc">Generate the apk file</li></ul><h2 id="eef133ba-bb38-4b11-8341-66f8849487e3" class=""><em><span style="border-bottom:0.05em solid">Day 4</span></em></h2><ul id="d3ef6456-5659-44bd-9186-a828e7142995" class="bulleted-list"><li style="list-style-type:disc">Create navigation buttons between 2 screens</li></ul><ul id="fddf43eb-8585-4478-9368-a21b6633af6b" class="bulleted-list"><li style="list-style-type:disc">Load the states of India as a List View</li></ul><ul id="0e0f81a6-d9c3-40a4-a2bb-17dc5798e861" class="bulleted-list"><li style="list-style-type:disc">Show alerts on button clicks for validation</li></ul><h2 id="2ec8e492-6c19-423f-be0a-bcfd28519257" class=""><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid">Day 5</span></em></span></em></span></em></span></em></span></em></h2><ul id="a55ba040-9461-4448-83a5-9bb4974a8bd2" class="bulleted-list"><li style="list-style-type:disc">Download the project from telegram</li></ul><ul id="7f6b3eec-0b02-4ac8-82ac-50fd3cd364f5" class="bulleted-list"><li style="list-style-type:disc">Drag and drop the widget class files</li></ul><ul id="dbe53534-c55f-47ff-90ce-10878bb5fbc2" class="bulleted-list"><li style="list-style-type:disc">Design the splash screen page</li></ul><ul id="bc2fae25-303d-4d45-816d-5ecb2b2f2bd2" class="bulleted-list"><li style="list-style-type:disc">Design the create account page</li></ul><p id="feac5bd6-dac0-422a-af27-995d1184f3fb" class="">
+</p><hr id="44f41f6d-ee45-4333-8fb6-a6999b48263a"/><h1 id="d942292b-76a5-43fa-ad51-6a9c98cd6b48" class=""><em>Dart Programming Language</em></h1><p id="f31be968-1ac5-489f-97ad-445afe01a139" class="">File extension for dart files is <strong><strong><strong><strong><strong>.dart</strong></strong></strong></strong></strong></p><p id="ac614479-7864-4c75-b4ca-a4192f56a84f" class="">dart language is used to create applications using the flutter framework.</p><p id="731c871b-9940-46e7-ace9-867d535a7e7c" class="">A dart file should have a <strong><strong><strong><strong><strong><strong>void main(){} </strong></strong></strong></strong></strong></strong>function that is the entry point of the program.</p><p id="e60ca8bd-4a8d-43ec-b1a4-19e0b6b7a82e" class="">To print on the console, we use the <strong><strong><strong><strong><strong>print() </strong></strong></strong></strong></strong>function.</p><p id="4e2c8516-242b-4ce6-9009-ef7b2634a878" class="">Every line of code or statement should end in a semicolon ( ; )</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="72a11ff0-15f5-4d2a-89c9-7ab137c57ca1" class="code"><code class="language-Dart">void main(){
+	print(&quot;Hello World&quot;);
+}</code></pre><p id="d8357379-1eed-4188-829d-917e0aaf6937" class="">The above code prints “Hello World” on the console.</p><p id="6eb6d22b-883d-4151-b3bf-9a6c1e2280b1" class="">
+</p><h2 id="a2bcf00b-5e5b-4e4a-b54b-870c0a538948" class=""><span style="border-bottom:0.05em solid"><strong><em>Datatypes</em></strong></span></h2><p id="7bd160fa-0868-42ce-a583-3e7a2b512212" class="">There are 7 datatypes in dart, they are:</p><h3 id="b9098c45-3b17-4bcf-b82b-74feac197d7d" class="">1. Numbers</h3><p id="491ddd6f-ecea-444c-9510-982b735bfb00" class="">In dart, numbers are used to represent numeric literals.</p><h3 id="05bcb86b-2eb4-42a5-9578-e4050aa56b29" class="">2. Strings</h3><p id="307693c3-590d-4293-a7c5-3ee8387118e0" class="">It is used to represent a sequence of characters. It is a sequence of UTF-16 code units. The keyword string is used to represent string literals. String is a collection of characters enclosed in single, double or triple quotes.</p><p id="ef91f96f-7a92-41b4-891b-3deddbf2d059" class="">String str1 = “  ABC|abc  ”;</p><p id="c755bfe9-df33-498c-8557-28513b56aabc" class=""><strong><strong><strong><strong><strong><strong><strong>string in-built methods:</strong></strong></strong></strong></strong></strong></strong></p><p id="f3325caa-89aa-4167-b777-28b333201b2f" class="">toUpperCase() → str1.toUpperCase() → “  ABC|ABC  ”</p><p id="ad4962c8-9d1c-49d1-98cc-ad339325273f" class="">toLowerCase() → str1.toLowerCase() → “  abc|abc  ”</p><p id="c6a8e55f-dfb5-460d-a987-8d93c63567b5" class="">trim() → str1.trim() → “ABC|abc”</p><p id="a905fa56-e7f5-4075-9a54-88b932604e1a" class="">trimLeft() → str1.trimLeft() → “ABC|abc  ”</p><p id="8e8f1f92-705b-4fd4-9db5-7a15cdffcaf9" class="">trimRight() → str1.trimRight() → “  ABC|abc”</p><p id="145ea606-65a8-48c9-813d-dd27b353aad0" class="">split() → str1.split(”|”) → [”  ABC”, “abc  ”]</p><p id="ac63c177-f6e4-4f79-a8b8-1660e0794d94" class="">
+</p><h3 id="e39b36b1-9767-4767-80a6-28db8231aab3" class="">3. Booleans</h3><p id="158a021b-8f85-4680-a1de-0ebf3854ee74" class="">True or False values</p><p id="8a4d00ec-4bc6-446d-a830-2e3bc1681b17" class="">bool isTrue = true;</p><p id="17417157-e9d2-46db-9352-5bd811b18d3c" class="">bool isFalse = false;</p><p id="e3ff792f-e768-45a0-b160-8ee9a5e9c714" class="">
+</p><h3 id="c8713dc7-0ed9-4aef-8821-2f0971888ab8" class="">4. Lists</h3><p id="4ad197c3-d002-4b20-a42d-10b23068264a" class="">List is a collection of objects separated by commas and enclosed in square brackets.</p><p id="b18a9d97-6708-42a8-85b1-eac42c0dc1a1" class="">[1, 23, 69, 7, 10] is a list of numbers or integers.</p><p id="210a639e-685a-4809-a79a-81d1535bc72a" class="">Every element is positioned with an index number. Indices start with 0 for the first element.</p><p id="8f57f918-a7a6-44bc-a892-45039d8e2d56" class="">
+</p><p id="ac5e43a3-5ac8-485a-9577-e9ca5188ff21" class=""><strong><strong><strong>syntax:</strong></strong></strong></p><p id="31e21742-6818-4f52-8c00-9d1b6db68b8a" class="">List&lt;DataType&gt; ListName = [element1, element2, element3, element4];</p><p id="d13386f6-26d1-4bcd-834a-d1603e2cec12" class="">if you give the datatype as <strong><strong><strong><strong><strong><strong>dynamic</strong></strong></strong></strong></strong></strong>,<strong><strong><strong><strong><strong><strong> </strong></strong></strong></strong></strong></strong>it can take any datatype and be a heterogenous list.</p><p id="3210997e-42bb-4fea-aca9-ab5760ee8d23" class="">
+</p><p id="d6bb2eb6-d7fd-487c-bbcc-47be0fb62dce" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>functions: </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="893fe169-cd91-4235-82fe-5ce3e899eb91" class="code"><code class="language-Dart">void main(){
+	// declaration of studentNames list
+	List&lt;String&gt; studentNames = [”safwan”];
+
+	studentNames.add(&quot;mohammed&quot;);    // adds an element to the list
+	studentNames.addAll([&quot;jswanth&quot;, &quot;chakradhar&quot;]);   // adds multiple elements
+	studentNames.insert(2, &quot;deva&quot;);    // adds &quot;deva&quot; to index 2
+	studentNames.removeAt(2);    // removes element from index 2
+	studentNames.remove(&quot;mohammed&quot;);    // removes &quot;mohammed&quot; element 
+
+	// printing using index
+	print(studentNames[0]);
+	print(studentNames[3]);
+	print(studentNames.first);
+	print(studentNames.last);
+
+	studentNames.clear(); // removes all elements from the list
+}</code></pre><p id="a24e9286-6681-484b-b590-96ca4d37b275" class="">
+</p><h3 id="d7818c74-69d7-4fc6-9f45-8a6f30aa2644" class="">5. Maps</h3><p id="05cb5289-0173-460d-bf02-7e489b603d06" class="">The map object is a key value pair. Keys and values on a map may be of any type. It is a dynamic collection. The key always has to be String datatype and unique. Maps are defined with curly braces.</p><p id="e5f70cf7-3e0a-4859-8259-ca42394eaab4" class=""><strong><strong><strong><strong>syntax: </strong></strong></strong></strong>Map&lt;keyDataType, valueDataType&gt; MapName = { };</p><p id="16357c2f-3eb6-4c57-a0fd-c7f695e6be03" class="">Map &lt;String, String&gt; students = {};</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e9daede1-b0a3-49f7-a10b-4ee1a2456161" class="code"><code class="language-Dart">void main(){
+	Map Newmap = new Map();
+	Newmap[&#x27;First&#x27;] = &#x27;Dart&#x27;;
+	Newmap[&#x27;Second&#x27;] = &#x27;For&#x27;;
+	Newmap[&#x27;Third&#x27;] = &#x27;Developing apps&#x27;;
+	
+	Map&lt;String, dynamic&gt; students = {
+		&quot;Name&quot; : &quot;Mohammad&quot;,
+		&quot;Age&quot; : 18,
+		&quot;Branch&quot; : &quot;CSE&quot;
+	};
+
+	print(Newmap);
+	// output: {&#x27;First&#x27;: &#x27;Dart&#x27;, &#x27;Second&#x27;: &#x27;For&#x27;, &#x27;Third&#x27;: &#x27;Developing apps&#x27;}
+
+	print(students);
+	// output: {&quot;Name&quot; : &quot;Mohammad&quot;, &quot;Age&quot; : 18, &quot;Branch&quot; : &quot;CSE&quot;}
+}</code></pre><p id="1b6aa589-ed25-4013-a53e-a5484b42e74f" class="">
+</p><h3 id="ee069c4c-69f4-45e1-b63f-900379fdffb9" class="">6. Sets</h3><h3 id="ddbd53e7-6d23-4c93-aa5e-d36684653dcb" class="">7. Runes</h3><p id="85419db2-ed73-47ec-932d-33e7a8477661" class="">
+</p><h2 id="fe447adf-7b1f-4fb9-8f32-6139dbfc03fd" class=""><span style="border-bottom:0.05em solid"><em>Variables</em></span></h2><p id="88ab702f-4c5d-4738-b721-f452ec684e60" class="">variable declaration syntax: [<strong>typeOfVariable] [nameOfVariable] = value;</strong></p><p id="1d2345b0-e490-4ac4-a8dc-bb09ccceaa75" class="">examples : <div class="indented"><p id="d8cb642c-ca83-4939-9484-a7e23bf07736" class="">int num1 = 2;</p><p id="9f76f4ff-bf5a-4a95-bf8c-c53aed17e5bb" class="">double num2 = 1.5;</p><p id="0ff5915e-e67b-4f4c-8e84-58bd8515c143" class="">bool isRemember = true;</p></div></p><p id="896ddcd6-622d-46b4-b324-f1fc0533064a" class="">When a variable name starts with an underscore ( _variableName ), it is set to private access specifier. It cannot be accessed directly outside the local scope. It will need getter and setter methods to manipulate it.</p><p id="b1249f6a-6455-4926-b3a5-347fccf3766d" class="">
+</p><p id="df4140e1-aba3-479f-9612-d8a68b65d9b6" class=""><strong><strong><strong><strong><strong><strong><strong>String concatenation: </strong></strong></strong></strong></strong></strong></strong>to add a variable inside a string we use the dollar ( $ ) symbol</p><p id="a2854235-3be3-46a9-a6ab-bfb76d68a46d" class="">to add more than a variable, the dollar is accompanied with curly braces { }</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="be23e748-30a4-4fea-8335-77967413dd89" class="code"><code class="language-Dart">void main(){
+	int x = 5;
+	print(&quot;The value of x is $x&quot;);
+	print(&quot;The upper case of hello is ${&#x27;hello&#x27;.toUpperCase()}&quot;)
+}</code></pre><p id="96d5590d-c7d6-46e5-9962-7f06ee7da7bd" class="">
+</p><h2 id="66449384-d891-48f2-89c2-e6678c0c614a" class=""><span style="border-bottom:0.05em solid"><em><strong>Functions</strong></em></span></h2><p id="513cb1d2-3931-4cf5-9044-2771624baa16" class="">A set of statements that perform a specific operation or task. Can be reused by calling the function.</p><p id="1d15990e-5137-4e3b-80c7-367761545955" class="">
+</p><p id="f726a6f9-fe34-4290-b162-3cab91352610" class=""><strong>Syntax :</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3c6863fa-6077-4b7c-84f1-46b1e13ba432" class="code"><code class="language-Dart">// basic syntax
+returnType functionName(parameters){
+	// body of the function
+	return value;
+}</code></pre><p id="7720d732-9dae-4b5b-b43f-255804132b1c" class=""><strong>Examples :</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ccf22ae4-1988-4636-ab2a-ba92e97c01d6" class="code"><code class="language-Dart">// function to print on the terminal
+void printValue(){
+	print(&quot;Hello World&quot;);
+}
+// This function prints &quot;Hello World&quot; everytime it is called</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8b6c7ed8-d2a8-4070-b0dc-1330eae4a8d2" class="code"><code class="language-Dart">// function to add two inputed numbers
+int addTwoNumbers(int a, int b){
+	return a+b;
+}
+// This function takes in a and b integers as input parameters and returns a+b</code></pre><p id="c2472a2c-45ca-4b01-bdb3-a797e8745166" class="">Calling the function can be seen below</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="48b269bd-ce67-45c1-8601-675c2d6803bf" class="code"><code class="language-Dart">int sum = addTwoNumbers(2, 3);
+print(sum);</code></pre><p id="e8261fc0-adfd-47cb-8b5c-17b439a3171b" class="">We store the return output in the integer variable sum and print it in the nextline.</p><hr id="535b5686-5931-4607-b622-59db009fc1a3"/><h1 id="8df1596f-4315-439e-b569-6569a5963bc6" class=""><strong><em>Flutter</em></strong></h1><p id="2d5faa24-f99f-4950-a29f-e95eb042b21d" class="">Flutter is an open-source UI software development kit created by Google. It is used to develop cross platform applications from a single codebase for any web browser, Fuchsia, Android, iOS, Linux, macOS, and Windows.</p><p id="542cb20c-48ed-4ee2-ab8c-c6be0d095d1a" class="">
+</p><p id="da72d202-4f49-4043-8d83-4596843b5d55" class="">Every element in Flutter is considered as a <strong><strong>Widget</strong></strong>. They are classified into two types: <strong>state-ful</strong> and <strong>state-less. </strong>Stateful, meaning that it has a State object (defined below) that contains fields that affect how it looks.</p><p id="c1c0fc17-cbf3-4965-a7c0-78634a4c4947" class="">
+</p><p id="cb526e9d-16d4-4853-9c2a-ec465f414031" class="">Each screen has a name and it has to be defined with a route. The routes are defined in the main.dart file</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="5582000e-f01f-41cf-aa3a-02783a00e2a2" class="code"><code class="language-Dart">import &#x27;package:app/LoginScreen.dart&#x27;;
+import &#x27;package:flutter/material.dart&#x27;;
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: &#x27;Flutter Demo&#x27;,
+      routes : {
+				&quot;/login&quot;:(context) =&gt; const LoginScreen()
+			},
+			initialRoute: &quot;/login&quot;,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
+        useMaterial3: true,
+      ),
+      // home: const MyHomePage(title: &#x27;Muqabil&#x27;),
+    );
+  }
+}</code></pre><p id="7108717a-d4b9-4d7e-8ed6-3696cdb87bd5" class="">To create a new screen, create a new dart file and use the <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>flutter widget snippet </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>extension and type the prewritten stateful widget snippet by typing fs. Then add the route to this new page in the home page after importing it. The <strong>initialRoute </strong>key allows you to specify the page that opens first. Or you can just put “/” in the route name key to make it the initially loaded screen.</p><p id="58166245-7ef7-45e2-a0bc-7cc759788c24" class="">
+</p><h2 id="9eff7e3c-df01-47dd-9339-21cf5dee1f53" class=""><span style="border-bottom:0.05em solid"><strong><em>Container</em></strong></span></h2><p id="cd5338b4-11b1-42b0-900c-7e3065345da6" class="">The container in Flutter is a parent widget that can contain multiple child widgets and manage them efficiently. It has attributes like:</p><ul id="5adc3842-70e7-403f-b116-9db901ff8a3f" class="bulleted-list"><li style="list-style-type:disc">Color</li></ul><ul id="783d9fa4-789d-453a-bf40-272a27c9c857" class="bulleted-list"><li style="list-style-type:disc">Decoration</li></ul><ul id="11540785-4a37-433a-84c6-f07bc26dcc4e" class="bulleted-list"><li style="list-style-type:disc">Background color</li></ul><ul id="bc9b7edf-38ac-4ceb-95a3-d99163d44611" class="bulleted-list"><li style="list-style-type:disc">Padding</li></ul><ul id="cfb0cbe2-8cd2-4950-9df8-0b042ea2e261" class="bulleted-list"><li style="list-style-type:disc">Margin</li></ul><ul id="2baed7f8-4ce6-45c2-91ca-85622d33f835" class="bulleted-list"><li style="list-style-type:disc">Height and width</li></ul><p id="60803db0-2fdf-48f0-8e32-04e9a4bc3ac4" class="">Padding is the inner spacing in a container and margin is the exterior spacing in a container. Padding is the space between the border and child elements whereas margin is the space between the border and other neighbouring containers.</p><p id="24e9e5e3-55b1-483f-9728-c42553455b02" class="">The syntax is Container() and the properties are enclosed in paranthesis separated with commas. The properties are key: value pairs written with colons.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="5ac2387e-3e6d-4c1b-a818-050a8d26d332" class="code"><code class="language-Dart">body: Container(
+	color: Colors.amber,
+	height: 500,
+	width: 300,
+	margin: EdgeInsets.all(50),
+	
+	// child property
+	child: Text(&quot;this is a child container&quot;),
+)</code></pre><h2 id="ee46379d-94dd-4b88-9c47-957819db58f0" class=""><span style="border-bottom:0.05em solid"><em><strong>Text</strong></em></span></h2><p id="746386fe-3f97-4b20-b7ab-293204b91cf7" class="">Text  in Flutter is a widget that can display any written text and modify its size, font weight, font style, color etc.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="5a3ef7e0-e0aa-403a-a73c-306121f84e26" class="code"><code class="language-Dart">Text(
+	&quot;Hello World&quot;,
+	style: TextStyle(
+		fontSize: 35,
+		fontWeight: FontWeight.w600,
+		color: Colors.black,
+	)
+)</code></pre><p id="7152836e-2d67-4396-99ae-733549afc26f" class="">
+</p><h2 id="9b5d68c5-3c0e-4a45-9584-3f9256b22487" class=""><span style="border-bottom:0.05em solid"><em>Input text field</em></span></h2><p id="e788623e-1fb9-4deb-9702-be454ecc5132" class="">Input text field in Flutter is used to take user input in the form of written text.</p><p id="28ba297e-0784-4305-ad9e-772ac1cf9d9f" class="">Properties of text form field:</p><ol type="1" id="4282f89f-53a8-4d7a-adcf-ca895c278ff0" class="numbered-list" start="1"><li><strong>controller</strong> : to access the data in the field</li></ol><ol type="1" id="0b8220e7-c832-4b3a-97fb-2bbc9849007a" class="numbered-list" start="2"><li><strong>decoration </strong>: styling the looks of the field</li></ol><ol type="1" id="3ba32ab2-5205-4cbf-b8ce-50bbb416586b" class="numbered-list" start="3"><li><strong>obscureText </strong>: censors the text eg: passwords</li></ol><ol type="1" id="2b04f973-2d4d-4a37-89b2-b0476dbcad7d" class="numbered-list" start="4"><li><strong>validator</strong> : defines the condition for validation</li></ol><p id="75469e9a-9479-4713-a214-f913b0b13ac0" class="">syntax: </p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0c451630-fd24-4a34-aa31-24cb2efbad8f" class="code code-wrap"><code class="language-Dart">TextFormField(
+	controller: _passController,
+	decoration: InputDecoration(
+	  hintText: &quot;hello@gmail.com&quot;,
+    border: OutlineInputBorder(
+	    borderRadius: BorderRadius.circular(8)
+	  )
+	),
+	obscureText: true
+)</code></pre><h2 id="bcb0cde5-7395-495c-a75d-d99bf464a84a" class=""><span style="border-bottom:0.05em solid"><em>button</em></span></h2><p id="15dbe974-c333-4301-aa62-f4ecefeccd01" class="">Buttons in Flutter are used to take user input in the form of clicks.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3e236d48-ee06-4df2-b2bc-2d92f733f4d5" class="code code-wrap"><code class="language-Dart">TextButton(
+	onPressed: () {
+		// functionality of the button
+	},
+	child: Text(&quot;Click me&quot;)
+)</code></pre><h2 id="216f828f-77f5-42ba-85c4-b59a1becca2b" class=""><span style="border-bottom:0.05em solid"><em>row</em></span></h2><p id="ee9f73d0-1701-4631-a0dc-041a29d7d085" class="">Column widgets in flutter are used for horizontal allignment of its children. It can take multiple widgets and display them horizontally. The main axis in row is X axis and the cross axis is Y axis.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c3f1657d-f797-4823-86fd-cd898a5c64a9" class="code"><code class="language-Dart">Row(
+	children:[
+		Container(
+			color: Colors.blue,
+			width: 300,
+			height: 200
+		),
+		Container(
+			color: Colors.orange,
+			width: 300,
+			height: 200
+		),
+		Container(
+			color: Colors.black,
+			width: 300,
+			height: 200
+		)
+	]
+)</code></pre><h2 id="ac88cc5b-dc14-47c0-ad2a-f82c551065af" class=""><span style="border-bottom:0.05em solid"><em>column</em></span></h2><p id="4bc3e702-45a0-4594-83df-f7b3291e2f21" class="">Column widgets in flutter are used for vertical allignment of its children. It can take multiple widgets and display them vertically. The main axis in column is Y axis and the cross axis is X axis.</p><p id="b516f10c-80cb-4188-ad9d-19f182476466" class="">There are nine points defined in a column layout. Defined with respect to Main axis and Cross axis as start, centre or end. By default a column is at Main axis start and Cross axis centre. We can change these values.</p><p id="a013462a-af08-4e0f-a76d-9ee749a3528a" class="">Main axis and Cross axis also has properties called “spaceAround”, “spaceBetween”, “spaceEvenly”</p><p id="71f42c72-a2d3-49c9-b943-fd93b37a4382" class="">spaceAround - adds equal spaces between the children and also the borders</p><p id="8b34cfe1-e37c-4170-8afd-9c7aea030a98" class="">spaceEvenly - adds equal spaces between the children containers</p><p id="18e37940-f96d-496d-b2a3-4474e0a03f74" class="">spaceBetween - adds equal spaces between the children but no space from the borders</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9f9145e2-64e7-4cad-a3cf-c0cdc0a09f1e" class="code"><code class="language-Dart">Column(
+	mainAxisAlignment: MainAxisAlignment.center,
+	crossAxisAlignment: CrossAxisAlignment.center,
+	children:[
+		Container(
+			color: Colors.blue,
+			width: 300,
+			height: 200
+		),
+		Container(
+			color: Colors.orange,
+			width: 300,
+			height: 200
+		),
+		Container(
+			color: Colors.black,
+			width: 300,
+			height: 200
+		)
+	]
+)</code></pre><h2 id="829724fe-f546-45fb-a35a-1633b8618d96" class=""><span style="border-bottom:0.05em solid"><em>List view</em></span></h2><p id="27cb94cf-71f5-4acf-b312-533f3fc37154" class="">List view is to align the items or widgets vertically or horizontally on the screen. We can give the item count. List view allows for dynamic scrolling with items being retrieved from the server.</p><p id="84dfd9aa-1581-4581-a55a-a68bbc756ada" class="">Example of list view with a users list page:</p><ol type="1" id="a638ee29-01ec-40ab-a559-c61f31eb8b3f" class="numbered-list" start="1"><li>Create a new screen called <em>usersListView.dart</em> and add the route to main.dart</li></ol><ol type="1" id="405a94f1-75d2-4820-98d7-2148b3b6879f" class="numbered-list" start="2"><li>Create a list called <em><em><em><em><em><em>users </em></em></em></em></em></em>in the class of <em><em><em><em><em><em><em><em><em>usersListView.dart </em></em></em></em></em></em></em></em></em>file<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8c262f7f-a3ff-4426-90e9-fc60f8f54c9d" class="code code-wrap"><code class="language-Dart">List&lt;String&gt; users = [
+	&quot;Ramesh&quot;,
+	&quot;Anil&quot;,
+	&quot;Sai&quot;,
+	&quot;Chintu&quot;,
+	&quot;Manasa&quot;,
+	&quot;Deva&quot;,
+	&quot;Samantha&quot;,
+	&quot;Vishnu&quot;,
+	&quot;Ranjith&quot;,
+	&quot;Charan&quot;,
+	&quot;Patel&quot;,
+	&quot;Hemanth&quot;,
+	&quot;Balayya&quot;
+];</code></pre></li></ol><ol type="1" id="9956b144-63f5-457c-96e8-fe43514dce32" class="numbered-list" start="3"><li>Create the ListView widget in the page scaffold<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="197caa1f-ce6a-4b46-a0b6-947c43ce7623" class="code code-wrap"><code class="language-Dart">@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+			appBar: AppBar(title: Text(&quot;User List View&quot;)),
+			body: Container(
+				width: MediaQuery.of(context).size.width,
+				height: MediaQuery.of(context).size.height,
+				child: ListView.builder(
+					itemCount: users.length,
+					itemBuilder: (context, index) {
+						final name = users[index];
+						return Card(
+							child: Text(name),
+						);
+					},
+				),
+			)
+		)
+	}</code></pre></li></ol><p id="efbb9ca9-c8db-4f10-bc73-3721f1fd140b" class="">
+</p><p id="95343af1-6724-4881-b9bf-33abc1114e2c" class="">
+</p><hr id="6072fedb-c5e5-440b-a25c-c73efa3d9e36"/><h1 id="a9c0970c-3b8c-4c70-b7e1-0c7bf6545a84" class="">Login Page design</h1><p id="a83f6117-0193-4e39-8726-7798a60ec2d4" class="">Every screen returns a Scaffolding, Scaffolding can have appBar (Top bar), Body and other keys.</p><p id="2fd6551a-8926-467c-acd2-2d2041e784c1" class="">Here, we add a container inside the body and define its properties of color, width and height. The color is green, height is 200 and width is taken dynamically from the MediaQuery.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="764277ce-ab92-410b-96e8-2a32fad7af42" class="code"><code class="language-Dart">import &#x27;package:flutter/material.dart&#x27;;
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(&quot;Login Screen&quot;)),
+			body: Container(
+				color: Color.fromARGB(255, 255, 235, 164),
+				width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children:[
+            Container(
+              color: Colors.blue,
+              width: 300,
+              height: 100
+            ),
+            Container(
+              color: Colors.orange,
+              width: 300,
+              height: 100
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  color: Colors.black,
+                  width: 120,
+                  height: 100
+                ),
+                Container(
+                  color: Colors.brown,
+                  width: 120,
+                  height: 100
+                ),
+              ],
+            )
+          ]
+        )
+			),
+    );
+  }
+}</code></pre><p id="f076227c-49db-4849-9f70-bafbaf63de1e" class="">
+</p><h2 id="79a56d80-8732-4e43-a92c-7d07682b0700" class=""><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid"><em><span style="border-bottom:0.05em solid">Creating the Login Page</span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></span></em></h2><p id="54dbf103-cff9-4829-98fe-17af50be71d5" class="">We are going to see how to design a login page with 11 children widgets in a column layout and also validate the input of email and password. We need the following components on the page: useer profile image, heading text, paragraph text, email address text input, password text input, forgot password button, login button, “create an account” link and “book a demo” page.</p><p id="5c2c947b-4e88-4b17-bdcc-ff7d343d7e3e" class="">We first take a Scaffold widget, and in the body we have a container containing a column and use it’s children property to load the 11 children components.</p><p id="3c729e9d-875b-4885-9e4e-d63411caf81b" class="">
+</p><h3 id="d349fa14-b849-4a61-9d88-59b56ae5aa3a" class="">Loading the profile image</h3><ol type="1" id="59ffc9d7-49d2-49b3-a954-4eea7b5b2a75" class="numbered-list" start="1"><li>select an image for the profile and load it</li></ol><ol type="1" id="f5df6cc2-263c-4666-a4f5-5cb18a4fa743" class="numbered-list" start="2"><li>open the project file in vs code</li></ol><ol type="1" id="88a41b87-a125-4c47-b176-39e558d5d94b" class="numbered-list" start="3"><li>create a new folder called <em><strong><em><strong><em><strong><em><strong><em><strong><em><strong>assets</strong></em></strong></em></strong></em></strong></em></strong></em></strong></em></li></ol><ol type="1" id="8cdc4ae0-4f9b-44d8-b76c-5f137a3b33de" class="numbered-list" start="4"><li>drag and drop the image into the <em><strong><em><strong><em><strong><em><strong><em><strong><em><strong><em><strong>assets </strong></em></strong></em></strong></em></strong></em></strong></em></strong></em></strong></em>folder</li></ol><ol type="1" id="86b17966-fb6d-40af-bec8-7b2faf9a40f2" class="numbered-list" start="5"><li>open the <em><strong><mark class="highlight-default">pubspec.yaml</mark></strong></em><em><strong> </strong></em>file</li></ol><ol type="1" id="73e4cdf9-d742-406a-b9b1-3fe8e457782f" class="numbered-list" start="6"><li>uncomment the assets section in the file</li></ol><ol type="1" id="0fa1d2db-0b82-464b-99db-8be36e28b527" class="numbered-list" start="7"><li>write the path of your image in the assets section</li></ol><ol type="1" id="24c5f6ce-7db3-4b45-b95c-da77e0febf34" class="numbered-list" start="8"><li>In the code, Image can be loaded with <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Image.asset(”assets/logo.png”) </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>or <strong><strong><strong><strong><strong><strong>Image.network(”</strong></strong></strong></strong></strong></strong><em><em><em><em><em><em><strong><strong><strong><strong><strong><strong>path”</strong></strong></strong></strong></strong></strong></em></em></em></em></em></em><strong><strong><strong><strong><strong><strong>) </strong></strong></strong></strong></strong></strong>for loading dynamic images from the server.</li></ol><p id="997c6303-8fdb-4fcd-8b10-ef00b933413f" class="">
+</p><h3 id="fbf4fe4d-fbd2-4994-ab4e-2da8d21a1cef" class="">Login Page code</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2e05bd8a-b034-481a-a178-5971527e733c" class="code code-wrap"><code class="language-Dart">import &#x27;package:flutter/material.dart&#x27;;
+
+// ignore: must_be_immutable
+class LoginScreen extends StatelessWidget {
+  LoginScreen({super.key});
+
+	bool isVisibilityOff = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+			body: Container(
+			width: MediaQuery.of(context).size.width,
+			height: MediaQuery.of(context).size.height,
+			margin: EdgeInsets.all(10),
+      child: Column(
+        children: [
+          // Profile Image
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(&quot;assets/logo.png&quot;, height: 100, width: 100),
+              const SizedBox(height: 12,),
+              
+              // Welcome Back text
+              const Text(&quot;Welcome Back&quot;, style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.w600
+              ),),
+              const SizedBox(height: 12,),
+              
+              // Paragraph text
+              const Text(&quot;Welcome Back. Enter your credentials to access your account&quot;,
+	              style: TextStyle(
+              		fontSize: 14,
+              		fontWeight: FontWeight.w400,
+              		color: Color.fromRGBO(138, 144, 162, 1)
+              	)),
+              const SizedBox( height: 24 ),
+              
+              // Email Input
+              const Text(&quot;Email Address&quot;, style: TextStyle(
+              	fontSize: 14,
+	              fontWeight: FontWeight.w400,
+              	color: Colors.black
+              )),
+              const SizedBox( height: 8 ),
+              
+              TextFormField(
+              	decoration: InputDecoration(
+              		hintText: &quot;hello@gmail.com&quot;,
+              		border: OutlineInputBorder(
+              			borderRadius: BorderRadius.circular(8)
+              ))),
+              const SizedBox( height: 20 ),
+              
+              // Password Input
+              const Text(&quot;Password&quot;, style: TextStyle(
+	              fontSize: 14,
+              	fontWeight: FontWeight.w400,
+              	color: Colors.black
+              )),
+              const SizedBox( height: 8 ),
+              
+              TextFormField(
+                obscureText: isVisibilityOff,
+              	decoration: InputDecoration(
+              		hintText: &quot;password&quot;,
+                  suffixIcon: InkWell(
+                    onTap: (){
+                      if (isVisibilityOff){ isVisibilityOff=false; }
+                      else{ isVisibilityOff = true; }
+                    },
+                    child: isVisibilityOff ? 
+                    const Icon(Icons.visibility_off) :
+                    const Icon(Icons.visibility),
+                  ),
+              		border: OutlineInputBorder(
+              		borderRadius: BorderRadius.circular(8)
+              ))),
+              const SizedBox( height: 20 ),
+            ],
+          ),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              TextButton(onPressed: (){}, child: Text(&quot;Forgot Password? &quot;),),
+            ],
+          ),
+          const SizedBox(height: 39),
+
+          TextButton(
+            onPressed: (){},
+            child: Container(
+              decoration: BoxDecoration(
+                color: const Color.fromRGBO(89, 86, 233, 1),
+                borderRadius: BorderRadius.circular(100)
+              ),
+              width: 280,
+              height: 50,
+              alignment: Alignment.center,
+              child: const Text(&quot;Login&quot;, style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                color: Colors.white
+              ),)
+            ),
+          ),
+          const SizedBox( height:  24),
+
+					// Create an account
+					Row(
+	          mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+						const Text(&quot;New Here? &quot;),
+						TextButton(onPressed: () {},
+						child: Text(&quot;Create an account&quot;)
+					)
+					])
+	        ]
+	      )
+			)
+    );
+  }
+}</code></pre><h2 id="aa6ce6db-feec-4622-bbed-2a4c1c297cac" class=""><em><span style="border-bottom:0.05em solid">Navigation</span></em></h2><p id="c82dbf7b-966f-4974-be52-fa3fbe9c2efa" class="">Navigation between screens is done using the routes written in main.dart, The route names are used to switch between screens.</p><p id="4881a35e-8456-47b8-93eb-b39e8843e740" class="">In Android, a route is equivalent to an Activity. In iOS, a route is equivalent to a ViewController. In Flutter, a route is just a widget.</p><p id="b9e3289c-ca56-462f-8e44-ae8dbbfd5e48" class="">This recipe uses the <a href="https://api.flutter.dev/flutter/widgets/Navigator-class.html"><code>Navigator</code></a> to navigate to a new route.</p><p id="510d3cfb-d0bd-442e-8cb4-22d3d4d1aaf2" class="">The next few sections show how to navigate between two routes, using these steps:</p><ol type="1" id="f26ab0e9-69ca-41b2-ab1d-e249912039a0" class="numbered-list" start="1"><li>Create two routes.</li></ol><ol type="1" id="cbebe95e-0d40-4e1a-bc92-2ed7d4e24127" class="numbered-list" start="2"><li>Navigate to the second route using Navigator.push().</li></ol><ol type="1" id="d955dea8-c591-4d08-b3f0-d908b7e9b34d" class="numbered-list" start="3"><li>Return to the first route using Navigator.pop().</li></ol><h3 id="24534bfd-7d1c-40b7-82e9-978157b24089" class="">1. Create two routes</h3><p id="ad77df42-6d46-4fde-8f37-67d577a28990" class="">First, create two routes to work with. Since this is a basic example, each route contains only a single button. Tapping the button on the first route navigates to the second route. Tapping the button on the second route returns to the first route.</p><p id="a035a566-85f1-4402-bbdb-287c351a2d3a" class="">First, set up the visual structure:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="76f91ce8-8afe-4041-ae0d-66f337a8aad3" class="code code-wrap"><code class="language-Dart">class FirstRoute extends StatelessWidget {
+  const FirstRoute({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(&#x27;First Route&#x27;),
+      ),
+      body: Container(
+        child: TextButton(
+          child: const Text(&#x27;Open route&#x27;),
+          onPressed: () {
+            // Navigate to second route when tapped.
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class SecondRoute extends StatelessWidget {
+  const SecondRoute({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(&#x27;Second Route&#x27;),
+      ),
+      body: Container(
+        child: TextButton(
+          onPressed: () {
+            // Navigate back to first route when tapped.
+          },
+          child: const Text(&#x27;Go back!&#x27;),
+        ),
+      ),
+    );
+  }
+}</code></pre><h3 id="da0d7c51-d33f-4bff-a6b6-32a2609b7025" class="">2. Navigate to the second route using Navigator.pushNamed()</h3><p id="7a6fd16a-77d9-4710-a350-e4ed8a5bc8ec" class="">To switch to a new route, use the <a href="https://api.flutter.dev/flutter/widgets/Navigator/push.html"><code>Navigator.pushNamed()</code></a> method. The <code>push()</code> method adds a <code>Route</code> to the stack of routes managed by the <code>Navigator</code>.</p><p id="b864f1ad-943e-4280-8df5-55a4a3d752f1" class="">In the <code>build()</code> method of the <code>FirstRoute</code> widget, update the <code>onPressed()</code> callback:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="19003d8f-1220-4b29-b1d0-a844209002fe" class="code"><code class="language-Dart">// Within the `FirstRoute` widget
+onPressed: () {
+  Navigator.pushNamed(
+    context, &quot;/SecondRoute&quot;),
+  );
+}</code></pre><h3 id="2624bfea-4258-4d3e-9469-fd66596f32d5" class="">3. Return to the first route using Navigator.pop()</h3><p id="3df3f499-2bbf-4f75-8d78-aef89c15da26" class="">How do you close the second route and return to the first? By using the <a href="https://api.flutter.dev/flutter/widgets/Navigator/pop.html"><code>Navigator.pop()</code></a> method. The <code>pop()</code> method removes the current <code>Route</code> from the stack of routes managed by the <code>Navigator</code>.</p><p id="d7eb3286-8e7e-4ca7-b784-794c797b0d57" class="">To implement a return to the original route, update the <code>onPressed()</code> callback in the <code>SecondRoute</code> widget:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="6514d060-8cb8-481a-be06-637be5ac53df" class="code"><code class="language-Dart">// Within the SecondRoute widget
+onPressed: () {
+  Navigator.pop(context);
+}</code></pre><p id="95bee49d-9bcf-4722-906b-1f071c5b476e" class="">
+</p><h2 id="26c6addb-d5e0-4090-8e78-961f6fd1647b" class=""><em><span style="border-bottom:0.05em solid"><strong><em><span style="border-bottom:0.05em solid"><strong><em><span style="border-bottom:0.05em solid"><strong>Responsive Design</strong></span></em></strong></span></em></strong></span></em></h2><p id="834f2255-719a-44b7-9103-5eb7dca6a50b" class="">If the widgets overflow from the screen, we can wrap the content in a widget called <strong>SingleChildScrollView. </strong>This allows the screen to be scrollable and the widgets will be below the visible viewport.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d1030e7e-e9f9-4a0a-8343-e4c74ccdb22e" class="code code-wrap"><code class="language-Dart">body: Container(
+	width: MediaQuery.of(context).size.width,
+	height: MediaQuery.of(context).size.height,
+	child: SingleChildScrollView(
+		child: Column(
+			...
+		)
+	)
+)</code></pre><p id="7e3a01b0-31a4-48c2-b126-3dc0f3e4a2b2" class="">The above code shows a column child in the <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>SingleChildScrollView </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>widget.</p><p id="2270949c-8ba7-4604-9907-6a09c9f628a7" class="">
+</p><h2 id="5b9eea60-89c8-43fa-9380-de26b752c437" class=""><em><span style="border-bottom:0.05em solid"><strong><em><span style="border-bottom:0.05em solid"><strong>Login Form Validation</strong></span></em></strong></span></em></h2><ol type="1" id="8a29c8ae-f342-4d94-aa9f-bae5ad7dee2f" class="numbered-list" start="1"><li>Create a global form key</li></ol><ol type="1" id="734497d5-b02b-4084-88b1-066d53c5e40b" class="numbered-list" start="2"><li>Wrap the column with the widget <strong><strong><strong><strong>Form</strong></strong></strong></strong></li></ol><ol type="1" id="973b56e0-108a-43ba-aa9b-a002b17618e2" class="numbered-list" start="3"><li>Assign the key attribute to the Form</li></ol><ol type="1" id="67cdf040-7861-4b5d-a32a-339550bf6a06" class="numbered-list" start="4"><li>Create textEditingController for each text field</li></ol><ol type="1" id="39c085d9-6dbf-494c-b098-c35ed01625bb" class="numbered-list" start="5"><li>Assign the controller to the attributes in each text field</li></ol><ol type="1" id="0bded400-2357-4ffe-894c-956f1866ba65" class="numbered-list" start="6"><li>Add the validator property to each text field</li></ol><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2e95808b-c3d1-40af-973c-f13d2928b891" class="code code-wrap"><code class="language-Dart">// top of the class
+final _formKey = Global...;
+textEditingController _emailController = TextEditingController(...);
+textEditingController _passwordController = TextEditingController(...);
+
+// in the textForm
+TextFormField(
+	validator: (value){
+		...
+	},
+	controller: _passwordController,
+	obscureText: true,
+)
+
+// in the login button
+TextButton(
+	onPressed: (){
+		showValidationAlert();
+	},
+  child: Container(
+    decoration: BoxDecoration(
+	  color: const Color.fromRGBO(89, 86, 233, 1),
+    borderRadius: BorderRadius.circular(100)
+  ),
+  width: 280,
+  height: 50,
+  alignment: Alignment.center,
+  child: const Text(&quot;Login&quot;, style: TextStyle(
+		fontSize: 16,
+    fontWeight: FontWeight.w600,
+    color: Colors.white
+	),)
+	),
+)
+
+// showValidationAlert function at the bottom of the class
+void showValidationAlert() {
+	if (_emailController.text.isEmpty){
+		showDialog(
+			context: context,
+			builder: (context) {
+				return AlertDialog(
+					title: Text(&quot;Alert&quot;),
+					content: Text(&quot;Please Enter Email&quot;),
+					actions: [
+						TextButton( onPressed: () {
+							Navigator.pop(context);
+						}, child: Text(&quot;ok&quot;)
+						)
+					]
+				)
+			}
+		)
+	}
+}</code></pre><hr id="8dc99a8e-668c-4124-894b-178221a06130"/><h1 id="fc44a32c-93fd-446e-99de-354c05cc1cc8" class="">Social Media App Project</h1><div id="79288cb1-8ba3-4718-a373-2bd3a2be6c9d" class="column-list"><div id="669e196b-fce6-4125-9cde-0d5cda8b22d9" style="width:43.75%" class="column"><p id="dfe8d6ae-97f0-40e9-a62c-2cac10e85460" class="">The features of this application are:</p><ul id="e6bceb7b-be2c-4c15-9b49-e024df2fefc1" class="bulleted-list"><li style="list-style-type:disc">Splash screen</li></ul><ul id="40f61ddf-ff2f-4fce-9938-c07e3d82a326" class="bulleted-list"><li style="list-style-type:disc">Login screen</li></ul><ul id="44e3f822-90b3-42d5-b53d-69804db116e9" class="bulleted-list"><li style="list-style-type:disc">Create account screen</li></ul><ul id="ad432a47-24d8-448a-8da8-2e9f928a45a3" class="bulleted-list"><li style="list-style-type:disc">Forgot password screen</li></ul><ul id="a849ea84-c57f-47b3-a9f9-9b1a102e1408" class="bulleted-list"><li style="list-style-type:disc">Feed screen</li></ul><ul id="448f71c1-b2b1-4c73-82c0-b38b54e231e3" class="bulleted-list"><li style="list-style-type:disc">Upload photos</li></ul><ul id="4bee482e-7a1c-47ca-aaf2-f9f5b9b1edee" class="bulleted-list"><li style="list-style-type:disc">My posts screen</li></ul></div><div id="31cc24cd-e699-43f9-a876-328921e959e2" style="width:56.25%" class="column"><p id="b6e5f9ec-c546-4111-abda-e41a17fec30f" class="">Folders created inside lib folder:</p><ul id="965fd6df-0977-4d67-af49-cc144daddcfc" class="bulleted-list"><li style="list-style-type:disc">addPosts</li></ul><ul id="9e5bf9da-b3cb-49b7-a35b-db8d77e0a193" class="bulleted-list"><li style="list-style-type:disc">forgotPassword</li></ul><ul id="7938d89d-9f79-45b0-b6bb-ade819528fd5" class="bulleted-list"><li style="list-style-type:disc">home</li></ul><ul id="34c6bf95-7b5e-413d-9619-37b99ff5639e" class="bulleted-list"><li style="list-style-type:disc">login</li></ul><ul id="a4ca7970-e43b-4ab0-8119-5e6f87ec2d75" class="bulleted-list"><li style="list-style-type:disc">myPosts</li></ul><ul id="3e88c9d3-f8fc-4af6-b44e-76e4a158f1ee" class="bulleted-list"><li style="list-style-type:disc">signup</li></ul><ul id="c9d65519-1b42-4989-aa41-3005a6c55099" class="bulleted-list"><li style="list-style-type:disc">splash</li></ul><ul id="ef7804b1-d9a1-460f-93a3-24b1bb7be226" class="bulleted-list"><li style="list-style-type:disc">widgets</li></ul></div></div><p id="2a4832f2-84b7-4ab3-9ea7-adc44e3e71fe" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Reusable Components: </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong> A class that can be reused wherever the same element is required, instead of repeating the same code over and over again.</p><p id="a108e18b-26c8-4ff2-a44b-846dc4e736bc" class="">Parameters for textButton class: title, background color, border color.</p><h2 id="a2d3f080-69f6-49a0-92a3-5afe0e1f0788" class="">1. Create the folders inside lib</h2><h2 id="32cd838f-3a7e-4489-ba13-e9c087b6b1d6" class="">2. Create classes for reusable widgets</h2><h2 id="b7cb5d64-035f-4adf-ab38-f06e3e437f46" class="">3. Start designing the pages for signup and splash</h2><p id="0c9bbc5a-c417-4b6c-ad25-2d35736e0af8" class="">
+</p><p id="4441f4bf-71d6-4363-bf88-8853d6554570" class="">Figma link for the project: <a href="https://www.figma.com/file/6QuGZGYSFGnIS56k8xYfIv/NGW?node-id=35%3A389&amp;mode=dev">https://www.figma.com/file/6QuGZGYSFGnIS56k8xYfIv/NGW?node-id=35%3A389&amp;mode=dev</a></p><hr id="0041d9bb-a75f-4496-805a-880b5906ae4e"/><h1 id="e4853401-9e40-4faf-b58d-e1ab63685e4b" class="">FireBase</h1><div id="f61b5505-1d56-409b-9f0b-81a13fe869ae" class="column-list"><div id="b6c2d2d3-2dce-4bc0-aad4-23479270d137" style="width:62.5%" class="column"><p id="d4518518-0ef8-48e5-b8c5-3835038e2837" class="">Firebase, Inc. is a set of backend cloud computing services and application development platforms provided by Google. It hosts databases, services, authentication, and integration for a variety of applications, including Android, iOS, JavaScript, Node.js, Java, Unity, PHP, and C++.</p><figure id="49e3940c-220d-4fe3-9674-daa27716bb5d"><a href="https://firebase.google.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Firebase | Google’s Mobile and Web App Development Platform</div><div class="bookmark-description">Discover Firebase, Google’s mobile and web app development platform that helps developers build apps and games that users will love.</div></div><div class="bookmark-href"><img src="https://www.gstatic.com/devrel-devsite/prod/v8332a5cec2b627575422eb634078b4a9892f3eac6f9006e54b6e9bbf0bfda91f/firebase/images/touchicon-180.png" class="icon bookmark-icon"/>https://firebase.google.com/</div></div><img src="https://i.ytimg.com/vi/XHvWx1F3S4A/maxresdefault.jpg" class="bookmark-image"/></a></figure></div><div id="7a7665ae-baff-4368-aea2-7a9f5071b281" style="width:37.50000000000001%" class="column"><figure id="75ce119e-13ed-4fb8-be50-d447f4a7acbd" class="image"><a href="Mobile%20App%20Dev%202317bd82e1d249229f6169690c6fee09/Untitled.png"><img style="width:900px" src="Mobile%20App%20Dev%202317bd82e1d249229f6169690c6fee09/Untitled.png"/></a></figure></div></div><p id="9e7df7dc-21c1-48ec-b8f1-ae6d6623524b" class="">
+</p><p id="aac3e6a5-5073-4a1b-8c14-d8233b94e2df" class=""><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Firebase services used in the application:</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></p><ol type="1" id="de62fb1a-e3c0-40f4-8dbc-e716f4fa0336" class="numbered-list" start="1"><li>Authentication - account verification</li></ol><ol type="1" id="baed4e38-f4d3-4390-a658-7032c53aac93" class="numbered-list" start="2"><li>Cloud Firestore - store user data</li></ol><ol type="1" id="efd8808a-b6b2-43a1-b0c3-fc187113029e" class="numbered-list" start="3"><li>Cloud storage - store files and images</li></ol><ol type="1" id="2fd42f62-1436-4602-a621-3bb513606473" class="numbered-list" start="4"><li>Cloud messaging - push notifications</li></ol></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
