@@ -85,7 +85,7 @@ a{
 }
 
 .redirectContainer{
-    background-color: #a1a3fd;
+    background-color: #25D366;
     height: 6vh;
     border: dashed rgb(71, 71, 71) 2px;
 }
@@ -247,11 +247,11 @@ header{
     }
 }
 
-@media screen and (min-width: 1024px){
+/* @media screen and (min-width: 1024px){
     .redirectContainer{
         display: none;
     }
-}
+} */
 
 /* Tablets */
 @media screen and (max-width: 768px){
