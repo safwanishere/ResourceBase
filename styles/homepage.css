@@ -64,7 +64,7 @@ a{
     background-color: inherit;
     border: solid 5px #5A7BD0;
     border-radius: 20px;
-    height: 7vh;
+    height: 8vh;
     width: 30%;
     margin: 2vh 15% 2vh 0;
     font-family: 'Roboto', sans-serif;
@@ -166,6 +166,18 @@ header{
 
 .branch h1{
     font-size: 2.8rem;
+}
+
+.branchButtonGrid{
+    height: fit-content;
+    margin-top: 6vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10%;
+}
+
+.branchButtonGrid button{
+    width: 100%;
 }
 
 .semOne, .semTwo{
@@ -287,6 +299,10 @@ header{
     }
     .leftSideHeader{
         width: 30%;
+    }
+
+    .branchButtonGrid{
+        grid-template-columns: 1fr;
     }
 }
 
