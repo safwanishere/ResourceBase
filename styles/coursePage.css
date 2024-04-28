@@ -134,3 +134,14 @@ a{
         width: 1000;
     }
 }
+
+/* dark theme css styles */
+.darkBody{
+    background-color: #1E1E1E;
+    color: white;
+}
+
+.whiteFont{
+    color: white;
+    font-weight: lighter;
+}

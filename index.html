@@ -21,7 +21,6 @@
     <title>Resource Base</title>
 
     <link rel="stylesheet" href="styles/homepage.css">
-    <script src="scripts/main.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,13 +39,14 @@
         <div class="rightSideHeader">
             <a href="contact.html"><h2>Contact</h2></a>
             <a href="https://chat.whatsapp.com/InQyGpnanyuJYFfyTgMGaB"><h2>Community</h2></a>
+            <a onclick="toggle()"><i id="darkThemeToggle" class="fa-solid fa-cloud-moon"></i></a>
         </div>
     </header>
 
     <section class="heroSection">
         <div class="heroLeft">
             <h1>Everything you need, to learn.</h1>
-            <P>Welcome to the ultimate resource destination for academic success. We offer a comprehensive collection of course textbooks and reference materials, all conveniently in one place. With our help, you'll have everything you need to excel in your exams and achieve your educational goals. Start exploring today.</P>
+            <P class="heroPara">Welcome to the ultimate resource destination for academic success. We offer a comprehensive collection of course textbooks and reference materials, all conveniently in one place. With our help, you'll have everything you need to excel in your exams and achieve your educational goals. Start exploring today.</P>
             <button class="button" onclick="scrollDown();">Get started</button>
             <button class="button" onclick="window.location.href = 'contact.html'">Contact dev</button>
         </div>
@@ -75,7 +75,7 @@
         <section class="branch">
             <h1>Question Papers</h1>
             <div class="semOne">
-                <h2>Midsem 1 - Semester 1</h2>
+                <h2 class="midOneSemOne">Midsem 1 - Semester 1</h2>
                 <button class="button" type="submit" onclick="window.open('Resources/QuestionPapers/mid1-S1-OOP.pdf')">Object Oriented Programming</button>
                 <button class="button" type="submit" onclick="window.open('Resources/QuestionPapers/mid1-S1-AP.pdf')">Applied Physics</button>
                 <button class="button" type="submit" onclick="window.open('Resources/QuestionPapers/mid1-S1-EC.pdf')">Engineering Chemistry</button>
@@ -84,7 +84,7 @@
             </div>
 
             <div class="semOne">
-                <h2>Midsem 2 - Semester 1</h2>
+                <h2 class="midTwoSemOne">Midsem 2 - Semester 1</h2>
                 <button class="button" type="submit" onclick="window.open('Resources/QuestionPapers/mid2-S1-OOP.pdf')">Object Oriented Programming</button>
                 <button class="button" type="submit" onclick="window.open('Resources/QuestionPapers/mid2-S1-AP.pdf')">Applied Physics</button>
                 <button class="button" type="submit" onclick="window.open('Resources/QuestionPapers/mid2-S1-EC.pdf')">Engineering Chemistry</button>
@@ -93,7 +93,7 @@
             </div>
 
             <div class="semOne">
-                <h2>Sem end - Semester 1</h2>
+                <h2 class="semOneEnd">Sem end - Semester 1</h2>
                 <button class="button" type="submit" onclick="window.open('Resources/QuestionPapers/endsemEVS.pdf')">Environmental Science</button>
                 <button class="button" type="submit" onclick="window.open('Resources/QuestionPapers/endsemMAC.pdf')">Matrices and Calculus</button>
                 <button class="button" type="submit" onclick="window.open('Resources/QuestionPapers/endsemEC.pdf')">Engineering Chemistry</button>
@@ -106,5 +106,7 @@
     </section>
 
     <div class="footer"></div>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>
