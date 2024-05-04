@@ -85,10 +85,10 @@ a{
 }
 
 .redirectContainer{
-    background-color: #643ee0;
+    background-color: #e0da3e;
     height: 6vh;
     border: dashed rgb(71, 71, 71) 2px;
-    color: white;
+    color: rgb(71, 71, 71) 2px;
 }
 .redirectContainer h2{
     font-size: 1.3rem;
