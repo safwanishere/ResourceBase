@@ -260,6 +260,41 @@ header{
     }
 }
 
+/* small screen laptops */
+@media screen and (max-width: 1300px){
+    .mainText{
+        font-size: 1.18rem;
+    }
+    h1{
+        font-size: 2.88rem;
+        line-height: 100%;
+    }
+    h2{
+        font-size: 0.98rem;
+    }
+    i{
+        font-size: 0.98rem;
+    }
+    p{
+        font-size: 0.88rem;
+    }
+    .button{
+        font-size: 0.68rem;
+        min-width: fit-content;
+    }
+
+    .heroRight img{
+        width: 320px;
+    }
+
+    .branchSection h2{
+        font-size: 1.58rem;
+    }
+    .branch h1{
+        font-size: 2.38rem;
+    }
+}
+
 /* @media screen and (min-width: 1024px){
     .redirectContainer{
         display: none;
