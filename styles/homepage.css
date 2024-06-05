@@ -85,10 +85,10 @@ a{
 }
 
 .redirectContainer{
-    background-color: #25D366;
+    background-color: #3f3f3f;
     height: 6vh;
-    border: dashed rgb(71, 71, 71) 2px;
-    color: rgb(71, 71, 71) 2px;
+    border: dashed rgb(255, 255, 255) 2px;
+    color: rgb(255, 255, 255);
 }
 .redirectContainer h2{
     font-size: 1.3rem;
@@ -96,6 +96,7 @@ a{
     word-spacing: 5px;
     line-height: 6vh;
     font-style: italic;
+    font-weight: 200;
 }
 
 /* Header section css */
