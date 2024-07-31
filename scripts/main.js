@@ -16,6 +16,7 @@ const branches = document.querySelectorAll(".branch");
 const mid1 = document.querySelector(".midOneSemOne");
 const mid2 = document.querySelector(".midTwoSemOne");
 const s2mid1 = document.querySelector(".midOneSemTwo")
+const s2mid2 = document.querySelector(".midTwoSemTwo")
 const semEnd = document.querySelector(".semOneEnd");
 const heroPara = document.querySelector(".heroPara");
 const mainText = document.querySelector(".mainText");
@@ -47,6 +48,8 @@ function enableDarkMode(){
     mid2.style.fontWeight = "lighter";
     s2mid1.style.color = "white";
     s2mid1.style.fontWeight = "lighter";
+    s2mid2.style.color = "white";
+    s2mid2.style.fontWeight = "lighter";
     semEnd.style.color = "white";
     semEnd.style.fontWeight = "lighter";
     heroPara.style.color = "rgb(220, 220, 220)";
@@ -85,6 +88,8 @@ function disableDarkMode(){
     mid2.style.fontWeight = "normal";
     s2mid1.style.color = "black";
     s2mid1.style.fontWeight = "normal";
+    s2mid2.style.color = "black";
+    s2mid2.style.fontWeight = "normal";
     semEnd.style.color = "black";
     semEnd.style.fontWeight = "normal";
     heroPara.style.color ="rgb(67, 67, 67)";
