@@ -182,7 +182,7 @@ header{
     width: 100%;
 }
 
-.semOne, .semTwo{
+.semOne, .semTwo, .semThree{
     height: fit-content;
     margin-top: 10vh;
     padding: 7vh 7%;
@@ -407,8 +407,7 @@ header{
         margin-top: 1vh;
         margin-bottom: 1vh;
     }
-    .semOne, .semTwo
-{
+    .semOne, .semTwo, .semThree{
         height: fit-content;
         margin-top: 7vh;
         padding: 3vh 5%;
@@ -457,8 +456,7 @@ header{
         border: solid 7px #C76464;
         border-radius: 30px;
     }
-    .semOne, .semTwo
-{
+    .semOne, .semTwo, .semThree{
         border: solid 7px #E29D9F;
         border-radius: 30px;
     }

@@ -11,6 +11,7 @@ if (darkMode == "enabled"){
     const header = document.getElementsByTagName("header");
     const semOneHead = document.getElementById("semOneHead");
     const semTwoHead = document.getElementById("semTwoHead");
+    const semThreeHead = document.getElementById("semThreeHead");
 
     body.classList.add("darkBody");
     for (let b of buttons){
@@ -32,4 +33,5 @@ if (darkMode == "enabled"){
     }
     semOneHead.style.color = "white";
     semTwoHead.style.color = "white";
+    semThreeHead.style.color = "white";
 }
