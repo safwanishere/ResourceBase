@@ -20,6 +20,7 @@ if (darkMode == "enabled"){
     const body = document.body;
     const heading2 = document.getElementsByTagName("h2");
     const iTags = document.getElementsByTagName("i");
+    const svgTags = document.getElementsByTagName("svg");
     const paragraphs = document.getElementsByTagName("p");
 
     body.classList.add("darkBody");
@@ -28,6 +29,9 @@ if (darkMode == "enabled"){
     }
     for (let i of iTags){
         i.classList.add("whiteFont");
+    }
+    for (let svg of svgTags){
+        svg.classList.add("whiteFont");
     }
     for (let p of paragraphs){
         p.style.color = "rgb(205, 205, 205)";

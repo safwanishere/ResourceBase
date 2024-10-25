@@ -51,8 +51,12 @@ p{
     display: inline-block;
 }
 
-i{
+i, svg{
     font-size: 1.2rem;
+}
+
+.whiteFont{
+    fill: white;
 }
 
 a{

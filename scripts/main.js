@@ -7,6 +7,7 @@ let darkMode = localStorage.getItem("darkMode");
 
 const body = document.body;
 const darkThemeToggle = document.getElementById("darkThemeToggle");
+const homeIcon = document.getElementById("homeIcon");
 const paragraphs = document.getElementsByTagName("p");
 const buttons = document.getElementsByTagName("button");
 const heading2 = document.getElementsByTagName("h2");
@@ -24,8 +25,8 @@ const header = document.getElementsByTagName("header");
 
 function enableDarkMode(){
     body.classList.add("darkBody");
-    darkThemeToggle.classList.remove("fa-cloud-moon");
-    darkThemeToggle.classList.add("fa-sun");
+    darkThemeToggle.classList.add("whiteFont");
+    homeIcon.classList.add("whiteFont");
     for (let p of paragraphs){
         p.classList.add("whiteFont");
     }
@@ -64,8 +65,8 @@ function enableDarkMode(){
 
 function disableDarkMode(){
     body.classList.remove("darkBody");
-    darkThemeToggle.classList.remove("fa-sun");
-    darkThemeToggle.classList.add("fa-cloud-moon");
+    darkThemeToggle.classList.remove("whiteFont");
+    homeIcon.classList.remove("whiteFont");
     for (let p of paragraphs){
         p.classList.remove("whiteFont");
     }

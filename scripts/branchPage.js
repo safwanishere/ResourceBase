@@ -2,6 +2,7 @@ let darkMode = localStorage.getItem("darkMode");
 
 if (darkMode == "enabled"){
     const body = document.body;
+    const homeIcon = document.getElementById("homeIcon");
     const buttons = document.getElementsByTagName("button");
     const heading2 = document.getElementsByTagName("h2");
     const iTags = document.getElementsByTagName("i");
@@ -14,6 +15,7 @@ if (darkMode == "enabled"){
     const semThreeHead = document.getElementById("semThreeHead");
 
     body.classList.add("darkBody");
+    homeIcon.classList.add("whiteFont");
     for (let b of buttons){
         b.classList.add("darkButton");
     }
