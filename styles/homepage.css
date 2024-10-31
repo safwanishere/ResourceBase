@@ -93,10 +93,10 @@ a{
 }
 
 .redirectContainer{
-    background-color: gold;
+    background-color: rgb(190, 35, 21);
     height: 6vh;
     border: dashed rgb(0, 0, 0) 2px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 .redirectContainer h2{
     font-size: 1.3rem;
