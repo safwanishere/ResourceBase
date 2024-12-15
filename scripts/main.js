@@ -22,6 +22,7 @@ const semEnd = document.querySelector(".semOneEnd");
 const heroPara = document.querySelector(".heroPara");
 const mainText = document.querySelector(".mainText");
 const header = document.getElementsByTagName("header");
+const marqueeText = document.querySelector(".marqueeText");
 
 function enableDarkMode(){
     body.classList.add("darkBody");
@@ -43,6 +44,7 @@ function enableDarkMode(){
     for (let branch of branches){
         branch.style.border = "solid 5px #BB86FC";
     }
+    marqueeText.classList.remove("whiteFont");
     mid1.style.color = "white";
     mid1.style.fontWeight = "lighter";
     mid2.style.color = "white";
